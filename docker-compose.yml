@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+  web_server:
+    hostname: web_server
+    build:
+      context: .
+      dockerfile: /web_server/Dockerfile
+    networks:
+      - no_external
+
+  http_server:
+    hostname: http_server
+    build:
+      context: .
+      dockerfile: /http_server/Dockerfile
+    networks:
+      - no_external
+
+  ldap_server:
+    hostname: ldap_server
+    build:
+      context: .
+      dockerfile: /ldap_server/Dockerfile
+    networks:
+      - no_external
+
+  c2_instance:
+    hostname: c2_instance
+    build:
+      context: .
+      dockerfile: /c2_instance/Dockerfile
+    networks:
+      - no_external
+
+  curl_instance:
+    hostname: curl_instance
+    build:
+      context: .
+      dockerfile: /curl_instance/Dockerfile
+    networks:
+      - no_external
+
+networks:
+  no_external:
+    driver: bridge
+    internal: true
