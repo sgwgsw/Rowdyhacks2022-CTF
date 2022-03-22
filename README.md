@@ -11,4 +11,4 @@ Exploit payloads must be sent using IPs, not hostnames. Use 'ping -c 1 <containe
 2. http_server
 3. ldap_server
 
-
+BE SURE TO RUN 'docker system prune -a' on your host machine when you are done exploiting.
