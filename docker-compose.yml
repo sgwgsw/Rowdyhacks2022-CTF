@@ -5,7 +5,7 @@ services:
     hostname: web_server
     build:
       context: .
-      dockerfile: /web_server/Dockerfile
+      dockerfile: web_server/Dockerfile
     networks:
       - no_external
 
@@ -13,7 +13,7 @@ services:
     hostname: http_server
     build:
       context: .
-      dockerfile: /http_server/Dockerfile
+      dockerfile: http_server/Dockerfile
     networks:
       - no_external
 
@@ -21,7 +21,7 @@ services:
     hostname: ldap_server
     build:
       context: .
-      dockerfile: /ldap_server/Dockerfile
+      dockerfile: ldap_server/Dockerfile
     networks:
       - no_external
 
@@ -29,7 +29,7 @@ services:
     hostname: c2_instance
     build:
       context: .
-      dockerfile: /c2_instance/Dockerfile
+      dockerfile: c2_instance/Dockerfile
     networks:
       - no_external
 
@@ -37,7 +37,7 @@ services:
     hostname: curl_instance
     build:
       context: .
-      dockerfile: /curl_instance/Dockerfile
+      dockerfile: curl_instance/Dockerfile
     networks:
       - no_external
 
