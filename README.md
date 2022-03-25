@@ -1,1 +1,1 @@
-See Exploit Lab Exercise.txt
+Refer to CTF Instructions
