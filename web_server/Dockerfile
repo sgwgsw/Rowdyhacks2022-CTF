@@ -3,6 +3,7 @@ FROM tomcat:8.0.53-jre8
 WORKDIR /tmp
 
 RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/log4j2.xml
+RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/flag.txt
 RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/server.xml
 RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/setenv.sh
 RUN wget https://raw.githubusercontent.com/sgwgsw/tomcat-log4j2/main/web.xml
