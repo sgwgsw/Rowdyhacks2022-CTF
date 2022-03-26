@@ -2,7 +2,6 @@ version: "3.9"
 
 services:
   web_server:
-    image: web_server
     hostname: web_server
     build:
       context: .
@@ -11,7 +10,6 @@ services:
       - no_external
 
   http_server:
-    image: http_server
     hostname: http_server
     build:
       context: .
@@ -20,7 +18,6 @@ services:
       - no_external
 
   ldap_server:
-    image: ldap_server
     hostname: ldap_server
     build:
       context: .
@@ -29,7 +26,6 @@ services:
       - no_external
 
   c2_instance:
-    image: ldap_server
     hostname: c2_instance
     build:
       context: .
@@ -38,7 +34,6 @@ services:
       - no_external
 
   curl_instance:
-    image: curl_instance
     hostname: curl_instance
     build:
       context: .
