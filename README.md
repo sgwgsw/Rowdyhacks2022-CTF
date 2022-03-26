@@ -1,6 +1,7 @@
 This repo is to be used for educational purposes only, and is intended to be run against your own machine. We do not condone the use of these skills/techniques outside of this lab environment. DO NOT change any files or commands; run exactly as described in “Starting the Lab” steps 1-4.  
 
 Scenario
+
 A local kitten daycare has recently suffered a zero-day exploit resulting in full system compromise via RCE (remote code execution). A digital forensics team investigating the incident has created a LAB environment meant to serve as a proof-of-concept for what happened. Can you replicate what happened that fateful day for the local kitten daycare?
 
 
@@ -10,6 +11,7 @@ Pre-Requisites
 
 
 Starting the Lab Environment
+
 ** Be sure to run the below commands as an administrative/root user, or with administrative/root privileges (e.g. 'sudo docker compose up -d').
 1.    Open Docker Desktop
 2.    Run 'git clone https://github.com/sgwgsw/Rowdyhacks2022-CTF.git' in a terminal window.
