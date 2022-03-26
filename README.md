@@ -16,7 +16,7 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 
 **Starting the Lab Environment**
 
-** Be sure to run the below commands as an administrative/root user, or with administrative/root privileges (e.g. 'sudo docker compose up -d').
+** Be sure to run the below commands with administrative/root privileges (e.g. 'sudo docker compose up -d').
 1.    Open Docker Desktop
 2.    Run 'git clone https://github.com/sgwgsw/Rowdyhacks2022-CTF.git' in a terminal window.
 3.    Change to the Log4j_LAB-Docker folder and run 'docker compose up -d' with admin/sudo privileges.
