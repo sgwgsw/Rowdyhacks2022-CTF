@@ -1,13 +1,17 @@
 This repo is to be used for educational purposes only, and is intended to be run against your own machine. We do not condone the use of these skills/techniques outside of this lab environment. DO NOT change any files or commands; run exactly as described in “Starting the Lab” steps 1-4.  
 
+
+
 **Scenario**
 
 A local kitten daycare has recently suffered a zero-day exploit resulting in full system compromise via RCE (remote code execution). A digital forensics team investigating the incident has created a LAB environment meant to serve as a proof-of-concept for what happened. Can you replicate what happened that fateful day for the local kitten daycare?
 
 
+
 **Pre-Requisites**
 1.    Docker Desktop – https://www.docker.com/products/docker-desktop/ 
 2.    Git – https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
+
 
 
 **Starting the Lab Environment**
@@ -17,6 +21,8 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 2.    Run 'git clone https://github.com/sgwgsw/Rowdyhacks2022-CTF.git' in a terminal window.
 3.    Change to the Log4j_LAB-Docker folder and run 'docker compose up -d' with admin/sudo privileges.
 4.    Once the command has finished running, select 'Containers / Apps' in Docker Desktop to confirm all containers in the stack are running
+
+
 
 **Hints**
 
