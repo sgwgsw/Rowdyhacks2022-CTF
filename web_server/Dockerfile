@@ -12,6 +12,7 @@ RUN rm /usr/local/tomcat/conf/logging.properties
 RUN mv log4j2.xml /usr/local/tomcat/conf
 RUN mv server.xml /usr/local/tomcat/conf
 RUN mv setenv.sh /usr/local/tomcat/bin
+RUN mv flag.txt /usr/local/tomcat
 RUN mv web.xml /usr/local/tomcat/conf
 RUN chmod u+x /usr/local/tomcat/bin/setenv.sh
 
