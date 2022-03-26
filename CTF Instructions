@@ -17,13 +17,15 @@ Starting the Lab Environment
 4.    Once the command has finished running, select 'Containers / Apps' in Docker Desktop to confirm all containers in the stack are running
 
 Hints
-1.    The web_server container is running the open source library Log4j v2.14.0. It is hosting a web server on port 8080.
-2.    The curl_instance container should be used to send the exploit string; you may consider using the curl command.
-3.    The c2_instance container should be used as your c2 (command and control) instance; you may consider listening on port 9999.
-4.    The ldap_server container is hosting the reference object, 'a'; reference objects respond with compiled java classes.
-5.    The http_server container is hosting the aforementioned compiled java code; the ldap_server will reach out and get said java code, if properly called/referenced.
-6.    You will need IP addresses at a certain point in this lab. Use 'ping -c 1 <container_hostname>' in curl_instance to get the IP of any container. Hostnames are: web_server, http_server, ldap_server, c2_instance, curl_instance
-7.    You will need two simultaneous Docker CLI sessions for the lab. To do so, hover over the container in Docker Desktop and click the 'CLI' button.
+1.    To start a Docker CLI session, hover over the container in 'Containers / Apps' on Docker Desktop and click the 'CLI' button. DO NOT open CLI sessions by other means. 
+2.    You will not need a CLI session on web_server (remember - this would be the victim's web server which we are trying to hack. An attacker wouldn't have access to this system).  
+3.    Use 'ping -c 1 <container_hostname>' to get the IP of any container. Hostnames are: web_server, http_server, ldap_server, c2_instance, curl_instance
+4.    The web_server container is running a Tomcat web server instance 8080. Log4j 2.14.0 is in-use.
+5.    The curl_instance container will be useful for sending the exploit.
+6.    The c2_instance container has netcact. 
+7.    The ldap_server container is hosting the reference object, 'Exploit'.
+8.    The http_server container is hosting compiled java code. This code wants to communicate on port 9999. 
+
 
 
 WHEN YOU ARE FINISHED
