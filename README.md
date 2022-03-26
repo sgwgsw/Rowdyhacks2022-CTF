@@ -17,7 +17,7 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 
 1.    Open Docker Desktop 
 2.    Run '**git clone https://github.com/sgwgsw/Rowdyhacks2022-CTF.git**' in a terminal window.
-3.    Change to the Log4j_LAB-Docker folder and run '**docker compose up -d**' with admin/sudo privileges.
+3.    Change to the Rowdyhacks2022-CTF folder and run '**docker compose up -d**' with admin/sudo privileges.
 4.    Once the command has finished running, select 'Containers / Apps' in Docker Desktop to confirm all containers in the stack are running
 
 
