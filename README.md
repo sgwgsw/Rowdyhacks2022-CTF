@@ -23,7 +23,6 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 4.    Once the command has finished running, select 'Containers / Apps' in Docker Desktop to confirm all containers in the stack are running
 
 
-
 **Hints**
 
 1.    To start a Docker CLI session, hover over the container in 'Containers / Apps' on Docker Desktop and click the 'CLI' button. DO NOT open CLI sessions by other means. 
