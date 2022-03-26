@@ -1,5 +1,4 @@
-This repo is to be used for educational purposes only, and is intended to be run against your own machine. We do not condone the use of these skills/techniques outside of this lab environment. DO NOT change any files or commands; run exactly as described in “Starting the Lab” steps 1-4.  
-
+This repo is to be used for educational purposes only, and is intended to be run against your own machine. We do not condone the use of these skills/techniques outside of this lab environment. DO NOT change any files or commands; run exactly as described in “Starting the Lab Environment".
 
 
 **Scenario**
