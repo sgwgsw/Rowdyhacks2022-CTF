@@ -16,8 +16,8 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 
 **Starting the Lab Environment**
 
-** Be sure to run the below commands with administrative/root privileges (e.g. 'sudo docker compose up -d').
 1.    Open Docker Desktop
+*** On Mac - Open Finder, click 'Go' on toolbar, select 'Home', create a folder 'opt'. Open a terminal in this directory and proceed. 
 2.    Run 'git clone https://github.com/sgwgsw/Rowdyhacks2022-CTF.git' in a terminal window.
 3.    Change to the Log4j_LAB-Docker folder and run 'docker compose up -d' with admin/sudo privileges.
 4.    Once the command has finished running, select 'Containers / Apps' in Docker Desktop to confirm all containers in the stack are running
