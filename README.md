@@ -41,7 +41,8 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 4.    Delete the cloned Log4j_LAB-Docker repo/folder on your machine
 
 
-**Solution**
+**Solution** - 
+
 There are several approaches to solving this CTF. Here is one successful approach to our CVE-2021-44228 challenge. 
 
 1.    Open a CLI session on the curl_instance container. Do this through Docker Desktop by selecting the ‘CLI’ button next to the curl_instance container.
