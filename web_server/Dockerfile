@@ -30,6 +30,6 @@ RUN mv apache-log4j-2.14.0-bin/log4j-core-2.14.0.jar /usr/local/tomcat/lib
 RUN mv apache-log4j-2.14.0-bin/log4j-jul-2.14.0.jar /usr/local/tomcat/lib
 RUN rm apache-log4j-2.14.0-bin.tar.gz
 
-EXPOSE 8080
+#EXPOSE 8080
 
 CMD ["catalina.sh", "run"]
