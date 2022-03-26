@@ -24,7 +24,7 @@ A local kitten daycare has recently suffered a zero-day exploit resulting in ful
 
 **Hints**
 
-1.    To start a Docker CLI session, hover over the container in 'Containers / Apps' on Docker Desktop and click the 'CLI' button. DO NOT open CLI sessions by other means. 
+1.    To start a Docker CLI session, hover over the container in 'Containers / Apps' on Docker Desktop and click the 'CLI' button. **DO NOT open CLI sessions by other means. **
 2.    You will not need a CLI session on web_server (remember - this would be the victim's web server which we are trying to hack. An attacker wouldn't have access to this system).  
 3.    Use '**ping -c 1 <container_hostname>**' to get the IP of any container. Hostnames are: web_server, http_server, ldap_server, c2_instance, curl_instance
 4.    The web_server container is running a Tomcat web server instance 8080. Log4j 2.14.0 is in-use.
